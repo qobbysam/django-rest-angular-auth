@@ -1,0 +1,32 @@
+
+<section ng-show="show_login">
+	<form ng-submit="do_login(userdata)">
+	<div class="form-group">
+
+		<div class="form-group">
+			<label></label>
+			<input class="form-control" type="text" ng-model="userdata.username" placeholder="username/email">
+		</div>
+		<div class="form-group">
+			<label></label>
+			<input class="form-control"type="password" ng-model="userdata.password" placeholder="password">
+		</div> 
+		<div class="form-group">
+			<input type="submit" value="login" class="form-control btn btn-success">
+		</div>
+		
+	</div>
+
+	<div ng-show = "show_error">
+		<div class="alert alert-danger" role="alert">
+			{{error_messages}}
+		</div>
+	</div>
+</form>
+</section>
+
+<section ng-hide="show_login">
+	<p>Already Login </p>
+
+	<button class="btn btn-error" ng-click= "do_signout()"> Logout</button>
+</section>

@@ -1,0 +1,95 @@
+<section>
+  <div class= "container">
+  <div class="row">
+    <div class="col-md-12">
+
+    <button class="btn">Create</button>
+
+    <button class="btn">profile</button>
+      
+    </div>
+  </div>
+</div>
+</section>
+<!-- list of cars -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div>
+        <form class="form-group" ng-submit="do_create()">
+          <input class="form-control" type="text" placeholder= "car name" ng-model="car_name"/>
+          <input class = "form-control btn btn-primary" value="create" type="submit" >
+
+        </form>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+      <ul class="list-group">
+         <li class="list-group-item" ng-repeat="results in data_results">
+         <div class="container">
+           <div class="row">
+             <div class="col-sm-6">
+              <h2> {{results.car_name}}</h2>
+             </div>
+             <div class="col-sm-3">
+               <button class="btn btn-success" ng-click="do_edit(results.id)">Edit</button>
+             </div>
+              <div class="col-sm-3">
+               <button class="btn btn-warning" ng-click="do_delete(results.id)">Delete</button>
+             </div>
+           </div>
+         </div>
+         </li>
+
+        </ul>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div>
+        <form class="form-group" ng-submit="do_create()">
+          <input class="form-control" type="textarea" placeholder= "{{profile_data}} " ng-model="car_name"/>
+          <input class = "form-control btn btn-primary" value="update" type="submit" >
+
+        </form>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div>
+        <form class="form-group" ng-submit="do_update(up_car_name)">
+          <input class="form-control" type="textarea"  ng-model="up_car_name"/>
+          <input class = "form-control btn btn-primary" value="update" type="submit" >
+
+        </form>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>

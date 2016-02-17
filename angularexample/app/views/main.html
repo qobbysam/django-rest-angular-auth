@@ -1,0 +1,47 @@
+<section>
+  <div class= "container">
+  <div class="row">
+    <div class="col-md-12">
+
+    <button class="btn" ng-click = "go_restricted()">Restricted</button>
+
+    <button class="btn" ng-click= "go_signup()">Signup</button>
+
+    <button class="btn" ng-click="go_login()">Login</button>
+
+
+      
+    </div>
+  </div>
+</div>
+</section>
+<!-- list of cars -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div>
+      <ul class="list-group">
+         <li class="list-group-item" ng-repeat="results in data_results">{{results.car_name}} | ownedby : {{results.owner.username}}</li>
+
+        </ul>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
